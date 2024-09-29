@@ -28,14 +28,14 @@ public class Dinosaur {
     public void setDINO_WEIGHT(float DINO_WEIGHT) {this.DINO_WEIGHT = DINO_WEIGHT;}
     public void setDINO_AGE(int DINO_AGE) {this.DINO_AGE = DINO_AGE;}
 
-    @Override public String toString() {
-        System.out.println("Meet " +
+    @Override
+    public String toString() {
+       return "Meet " +
                 DINO_NAME + " a " +
                 DINO_AGE + "-year old " +
                 DINO_SPECIES + ". As a " +
                 DIET + ", it has a robust weight of " +
-                DINO_WEIGHT + " kilograms.");
-        return null;
+                DINO_WEIGHT + " kilograms.";
     }
 
 

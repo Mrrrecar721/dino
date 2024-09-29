@@ -23,6 +23,6 @@ public class Main {
 
         System.out.println(RICHARD_RECAR.FIRST_NAME);
 
-        Tyran1.toString();
+        System.out.println(Tyran1.toString());
     }
 }
