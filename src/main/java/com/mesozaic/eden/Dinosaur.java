@@ -37,6 +37,4 @@ public class Dinosaur {
                 DIET + ", it has a robust weight of " +
                 DINO_WEIGHT + " kilograms.";
     }
-
-
 }
