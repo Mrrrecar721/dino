@@ -6,6 +6,8 @@ public class Dinosaur {
     String DIET;
     int DINO_AGE;
     float DINO_WEIGHT;
+    float FOOD_NEEDED;
+    String ENCLOSURE_TYPE;
 
     public Dinosaur(String species, String name, int age, float weight, String diet) {
         DINO_SPECIES = species;
@@ -13,6 +15,15 @@ public class Dinosaur {
         DINO_AGE = age;
         DINO_WEIGHT = weight;
         DIET = diet;
+        FOOD_NEEDED = FOOD_PER_MEAL();
+
+        ENCLOSURE_TYPE = switch (species){
+            case "Tyrannosaurus", "TRex" -> ENCLOSURE_TYPE = "XL";
+            case "Stegosaurus" -> ENCLOSURE_TYPE = "L";
+            case "Velociraptor" -> ENCLOSURE_TYPE = "M";
+
+            default -> throw new IllegalStateException("Unexpected value: " + species);
+        };
     }
 
 
@@ -35,6 +46,10 @@ public class Dinosaur {
                 DINO_AGE + "-year old " +
                 DINO_SPECIES + ". As a " +
                 DIET + ", it has a robust weight of " +
-                DINO_WEIGHT + " kilograms.";
+                DINO_WEIGHT + " kilograms. He/She requires " + FOOD_NEEDED + "kg of food per meal.";
+    }
+
+    public float FOOD_PER_MEAL(){
+        return (this.DINO_WEIGHT * .05f)/2;
     }
 }
